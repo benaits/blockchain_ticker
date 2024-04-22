@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTC-USD Ticker</title>
+</head>
+<body>
+    <h1>Cryptocoins tracker:</h1>
+    <% if (ticker) { %>
+      <p>Symbol: <%= ticker.symbol %></p>  
+      <p>Last Price: <%= ticker.last_trade_price %></p>
+        <p>Price last 24h: <%= ticker.price_24h %></p>
+        <p>Volume 24h: <%= ticker.volume_24h %></p>
+    <% } else { %>
+        <p>Failed to retrieve ticker data.</p>
+    <% } %>
+</body>
+</html>
